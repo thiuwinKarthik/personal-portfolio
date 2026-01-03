@@ -1,0 +1,380 @@
+/* =========================
+   RESET & BASE
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f6f7fb;
+  color: #111827;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: #0f172a;
+  color: #e5e7eb;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+   GLOBAL CONTAINER
+========================= */
+
+section,
+nav,
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+body.dark nav {
+  background: rgba(15, 23, 42, 0.8);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.nav-links a {
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #4f46e5;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+  padding: 5.5rem 2rem;
+}
+
+.about-section,
+.experience-section,
+.contact-section {
+  padding-top: 6rem;
+}
+
+/* =========================
+   HEADERS
+========================= */
+
+.about-header,
+.experience-header,
+.contact-header {
+  max-width: 720px;
+  margin: 0 auto 3.5rem;
+  text-align: center;
+}
+
+.about-header h2,
+.experience-header h2,
+.contact-header h2 {
+  font-size: 2.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.about-header p,
+.experience-header p,
+.contact-header p {
+  font-size: 1.05rem;
+  opacity: 0.85;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.2rem;
+}
+
+/* =========================
+   GRID SYSTEM
+========================= */
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* =========================
+   GLASS CARD (CLEAN)
+========================= */
+
+.glass-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+body.dark .glass-card {
+  background: #020617;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.glass-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.6rem;
+}
+
+.glass-card p {
+  opacity: 0.9;
+}
+
+.meta {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-top: 0.6rem;
+}
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.timeline {
+  max-width: 900px;
+  margin: auto;
+}
+
+.timeline-header {
+  margin-bottom: 1rem;
+}
+
+.timeline-header h3 {
+  font-size: 1.3rem;
+}
+
+.company {
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.duration {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.timeline-points {
+  padding-left: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.timeline-points li {
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+   TECH TAGS
+========================= */
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tags span {
+  background: rgba(79, 70, 229, 0.1);
+  color: #4f46e5;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-primary {
+  background: #4f46e5;
+  color: #fff;
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: #6366f1;
+}
+
+.btn-primary.outline {
+  background: transparent;
+  color: #4f46e5;
+  border: 2px solid #4f46e5;
+}
+
+.btn-primary.outline:hover {
+  background: #4f46e5;
+  color: #fff;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-card {
+  max-width: 720px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  margin-top: 5rem;
+  background: #ffffff;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+body.dark footer {
+  background: #020617;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.footer-container {
+  padding: 3rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;              /* 🔹 increased spacing */
+  align-items: flex-start;
+}
+
+/* QUICK LINKS COLUMN FIX */
+.footer-center {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;             /* ✅ space between About / Experience / Contact */
+}
+
+.footer-center a {
+  display: inline-block;
+  font-size: 0.95rem;
+  opacity: 0.85;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.footer-center a:hover {
+  color: #4f46e5;
+  transform: translateX(4px);
+}
+
+/* SOCIAL ICONS FIX */
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;              /* ✅ spacing between icons */
+  font-size: 1.3rem;
+}
+
+.footer-right a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  transition: background 0.25s, transform 0.25s, color 0.25s;
+}
+
+.footer-right a:hover {
+  background: rgba(79, 70, 229, 0.1);
+  color: #4f46e5;
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+body.dark .footer-bottom {
+  border-color: rgba(255, 255, 255, 0.08);
+}
